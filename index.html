@@ -11,7 +11,11 @@
 </head>
 <body>
     <div id="app">
-        <ul>{{emails}}</ul>
+        <ul v-if="emails.length === 10">
+            <li v-for="email in emails">
+                {{ email }}
+            </li>
+        </ul>
     </div>
 
     <script src="app.js"></script>
